@@ -17,6 +17,23 @@ body {
     padding: 0;
 }
 
+/* Header */
+
+
+
+
+
+
+/* Nav */
+
+
+
+
+
+
+/* Main */
+
+
 
 
 
@@ -75,9 +92,13 @@ body {
     border-radius: 30%;
 }
 
+
+
+
+
 /* Responsive */
 
-@media (width < 400px) {
+@media (width < 480px) {
     .footer {
         flex-direction: column;
     }
