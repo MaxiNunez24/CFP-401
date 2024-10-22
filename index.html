@@ -14,18 +14,33 @@
             document.getElementById('header').innerHTML = header;
             document.getElementById('nav').innerHTML = nav;
             document.getElementById('footer').innerHTML = footer;
+
+            // Añadir manejadores de eventos a los enlaces del nav
+            document.querySelectorAll('#nav a').forEach(link => {
+                link.addEventListener('click', async (event) => {
+                    event.preventDefault();
+                    const page = event.target.getAttribute('href').substring(1);
+                    await cargarPagina(page);
+                });
+            });
         }
+
+        async function cargarPagina(page) {
+            const content = await fetch(`./pages/${page}.html`).then(response => response.text());
+            document.getElementById('main').innerHTML = content;
+        }
+
         cargarSeccion()
     </script>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <title>CFP 401 - Laura Vicuña</title>
+    <title>CFP 401 Laura Vicuña</title>
 </head>
 
 <body>
-    <header id="header"></header>
-    <nav id="nav"></nav>
-    <main id="main"></main>
-    <footer id="footer"></footer>
+    <header id="header" class="header"></header>
+    <nav id="nav" class="nav"></nav>
+    <main id="main" class="main"></main>
+    <footer id="footer" class="footer"></footer>
 </body>
 
 </html>
