@@ -17,6 +17,23 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #37f;
+}
+
+a:visited {
+    color: var(--light);
+}
+
+li {
+    list-style-type: none;
+}
+
 /* Header */
 
 
@@ -65,11 +82,14 @@ body {
 
 .footer-links {
     list-style-type: none;
-    fill: #fff;
     height: 24px;
     width: 24px;
     box-shadow: 0 2px 10px 0 #00000080;
     transition: .4s ease;
+}
+
+.footer-links svg {
+    fill: #fff;
 }
 
 .footer-links:hover {
