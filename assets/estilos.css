@@ -65,7 +65,7 @@ body {
 
 .footer-links {
     list-style-type: none;
-    fill: var(--light);
+    fill: #fff;
     height: 24px;
     width: 24px;
     box-shadow: 0 2px 10px 0 #00000080;
