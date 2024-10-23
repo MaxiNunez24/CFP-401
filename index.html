@@ -5,32 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/estilos.css">
-    <script>
+    <script defer>
         async function cargarSeccion() {
-            header = await fetch('./sections/header.html').then(response => response.text());
-            nav = await fetch('./sections/nav.html').then(response => response.text());
-            footer = await fetch('./sections/footer.html').then(response => response.text());
+            const header = await fetch('./sections/header.html').then(response => response.text());
+            const nav = await fetch('./sections/nav.html').then(response => response.text());
+            const footer = await fetch('./sections/footer.html').then(response => response.text());
 
             document.getElementById('header').innerHTML = header;
             document.getElementById('nav').innerHTML = nav;
             document.getElementById('footer').innerHTML = footer;
 
             // Añadir manejadores de eventos a los enlaces del nav
-            document.querySelectorAll('#nav a').forEach(link => {
-                link.addEventListener('click', async (event) => {
-                    event.preventDefault();
-                    const page = event.target.getAttribute('href').substring(1);
-                    await cargarPagina(page);
+            document.querySelectorAll('.nav a').forEach(enlace => {
+                enlace.addEventListener('click', async (evento) => {
+                    evento.preventDefault();
+                    const pagina = evento.target.getAttribute('href').replace('#', '');
+                    await cargarPagina(pagina);
                 });
             });
+            // Cargar la página de inicio por defecto
+            await cargarPagina('inicio');
         }
 
         async function cargarPagina(page) {
-            const content = await fetch(`./pages/${page}.html`).then(response => response.text());
-            document.getElementById('main').innerHTML = content;
+            try {
+                const content = await fetch(`./pages/${page}.html`).then(response => response.text());
+                document.getElementById('main').innerHTML = content;
+            } catch (error) {
+                console.error(`Error al cargar la página ${page}:`, error);
+            }
         }
 
-        cargarSeccion()
+        document.addEventListener('DOMContentLoaded', cargarSeccion());
     </script>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>CFP 401 Laura Vicuña</title>
