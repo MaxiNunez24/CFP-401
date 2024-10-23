@@ -17,6 +17,23 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #37f;
+}
+
+a:visited {
+    color: var(--light);
+}
+
+li {
+    list-style-type: none;
+}
+
 /* Header */
 
 
