@@ -57,6 +57,33 @@ li {
 
 /* Nosotros */
 
+.nos-conteiner {
+    display: flex;
+
+}
+
+
+.integrantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 0px;
+    width: 50%;
+}
+
+.integrantes li img {
+    width: 50px;
+
+}
+
+.integrantes li p {
+    color: #d1d7df;
+    font-size: medium;
+}
+
+.integrantes li {
+    width: 150px;
+    text-align: center;
+}
 
 
 
