@@ -17,6 +17,23 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+a:visited {
+    color: var(--light);
+}
+
+li {
+    list-style-type: none;
+}
+
 /* Header */
 
 
@@ -31,9 +48,36 @@ body {
 
 
 
-/* Main */
+/* Curso */
+.lang-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 30px;
 
 
+}
+
+
+
+
+
+.cards img {
+    width: 100px;
+}
+
+.cards {
+    background: rgb(75, 69, 168);
+    background: linear-gradient(45deg, rgba(75, 69, 168, 0.9612219887955182) 0%, rgba(120, 145, 163, 0.3841911764705882) 57%, rgba(45, 153, 175, 0.8435749299719888) 100%);
+    width: 150px;
+    border-radius: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin: 2px;
+
+}
 
 
 
@@ -65,11 +109,14 @@ body {
 
 .footer-links {
     list-style-type: none;
-    fill: #fff;
     height: 24px;
     width: 24px;
     box-shadow: 0 2px 10px 0 #00000080;
     transition: .4s ease;
+}
+
+.footer-links svg {
+    fill: #fff;
 }
 
 .footer-links:hover {
