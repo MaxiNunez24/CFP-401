@@ -68,15 +68,26 @@ li {
 
 .nos-conteiner {
     display: flex;
+    text-align: center;
+}
+
+.nos-devs {
+    display: flex;
 
 }
 
+.nos-working {
+    display: flex;
+
+}
 
 .integrantes {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     margin: 0px;
     width: 50%;
+
+
 }
 
 .integrantes li img {
@@ -92,6 +103,7 @@ li {
 .integrantes li {
     width: 150px;
     text-align: center;
+
 }
 
 
