@@ -47,34 +47,37 @@ li {
     background-color: var(--blue2);
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    width: 100dvw;
+    height: 18dvh;
 }
 
 .header-logo {
     border-radius: 20%;
-    width: 120px;
-    height: 110px;
-    margin: 3px;
+    width: 110px;
+    height: 100px;
+    margin: 10px;
+    object-fit: cover;
 }
 
 .header .nav-mobile {
+    filter: brightness(100);
     width: 80px;
     height: 80px;
     display: none;
-    margin: auto;
 }
 
 .header .nav-icon {
-    width: 40px;
-    height: 40px;
-    margin: 20px;
+    max-width: 5vw;
+    margin: 10px;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-right: 350px;
+    gap: 2dvw;
+    margin-right: 10dvw;
 }
 
 nav a {
@@ -172,5 +175,15 @@ nav a {
 @media (width < 480px) {
     .footer {
         flex-direction: column;
+    }
+}
+
+@media (width < 768px) {
+    .header .nav-mobile {
+        display: block;
+    }
+
+    nav {
+        display: none;
     }
 }
