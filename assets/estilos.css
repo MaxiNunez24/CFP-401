@@ -223,12 +223,11 @@ nav a:hover {
     }
 
     nav {
-        display: block;
+        display: none;
         width: 100%;
         font-size: 20px;
         background: rgb(211, 23, 128);
         background: linear-gradient(0deg, rgba(211, 23, 128, 0.5) 0%, rgba(12, 88, 174, 0.7) 30%, rgba(0, 2, 4, 0.9) 100%);
-        opacity: 0;
         z-index: 1000;
     }
 
@@ -240,7 +239,7 @@ nav a:hover {
 
 
     #check:checked~nav {
-        opacity: 100;
+        display: block;
     }
 
     #check:checked~label img {
