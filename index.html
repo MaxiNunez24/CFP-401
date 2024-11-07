@@ -12,12 +12,15 @@
             document.getElementById('header').innerHTML = header;
             document.getElementById('footer').innerHTML = footer;
 
+            const check = document.getElementById('check');
+
             // Añadir manejadores de eventos a los enlaces del nav
             document.querySelectorAll('.header nav a').forEach(enlace => {
                 enlace.addEventListener('click', async (evento) => {
                     evento.preventDefault();
                     const pagina = enlace.getAttribute('href');
                     await cargarPagina(pagina);
+                    check.checked = false;
                 });
             });
 
