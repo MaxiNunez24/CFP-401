@@ -67,6 +67,8 @@ li {
     width: 80px;
     height: 80px;
     display: none;
+    margin-right: 18px;
+    border-radius: 50%;
 }
 
 #check {
@@ -219,6 +221,11 @@ nav a:hover {
 
     #check:checked~nav {
         opacity: 100;
+    }
+
+    #check:checked~label img {
+        transition: .5s ease;
+        transform: rotate(360deg);
     }
 
 }
