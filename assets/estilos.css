@@ -45,7 +45,8 @@ li {
 /* Header */
 
 .header {
-    background-color: var(--blue2);
+    background: rgb(8, 91, 182);
+    background: linear-gradient(-90deg, rgba(8, 91, 182, 1) 0%, rgba(150, 85, 163, 1) 71%, rgba(230, 88, 163, 1) 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -197,23 +198,27 @@ nav a:hover {
     }
 
     nav {
-        display: flex;
-        flex-direction: column;
+        display: block;
         position: fixed;
         width: 100%;
         height: auto;
         font-size: 20px;
-        background-color: var(--purple2);
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+        background: rgb(211, 23, 128);
+        background: linear-gradient(0deg, rgba(211, 23, 128, 0.5) 0%, rgba(12, 88, 174, 0.7) 30%, rgba(0, 2, 4, 0.9) 100%);
         top: 18dvh;
-        opacity: 0%;
-        padding: 2rem 0 2rem 0;
+        opacity: 0;
     }
 
+    nav a {
+        text-align: center;
+        justify-content: center;
+        border: 2px solid #000;
+        padding: .4em;
+    }
+
+
     #check:checked~nav {
-        opacity: 100%;
+        opacity: 100;
     }
 
 }
