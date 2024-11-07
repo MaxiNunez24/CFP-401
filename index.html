@@ -8,21 +8,22 @@
     <script defer>
         async function cargarSeccion() {
             const header = await fetch('./sections/header.html').then(response => response.text());
-            const nav = await fetch('./sections/nav.html').then(response => response.text());
             const footer = await fetch('./sections/footer.html').then(response => response.text());
-
             document.getElementById('header').innerHTML = header;
-            document.getElementById('nav').innerHTML = nav;
             document.getElementById('footer').innerHTML = footer;
 
+            const check = document.getElementById('check');
+
             // Añadir manejadores de eventos a los enlaces del nav
-            document.querySelectorAll('.nav a').forEach(enlace => {
+            document.querySelectorAll('.header nav a').forEach(enlace => {
                 enlace.addEventListener('click', async (evento) => {
                     evento.preventDefault();
-                    const pagina = evento.target.getAttribute('href').replace('#', '');
+                    const pagina = enlace.getAttribute('href');
                     await cargarPagina(pagina);
+                    check.checked = false;
                 });
             });
+
             // Cargar la página de inicio por defecto
             await cargarPagina('inicio');
         }
@@ -32,11 +33,13 @@
                 const content = await fetch(`./pages/${page}.html`).then(response => response.text());
                 document.getElementById('main').innerHTML = content;
             } catch (error) {
+                document.getElementById('main').innerHTML =
+                    `<h1>Error 404: La página ${page} no fue encontrada. </h1>`;
                 console.error(`Error al cargar la página ${page}:`, error);
             }
         }
 
-        document.addEventListener('DOMContentLoaded', cargarSeccion());
+        document.addEventListener('DOMContentLoaded', cargarSeccion);
     </script>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>CFP 401 Laura Vicuña</title>
@@ -44,7 +47,6 @@
 
 <body>
     <header id="header" class="header"></header>
-    <nav id="nav" class="nav"></nav>
     <main id="main" class="main"></main>
     <footer id="footer" class="footer"></footer>
 </body>
