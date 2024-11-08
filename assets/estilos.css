@@ -128,11 +128,13 @@ nav button.selected {
 
 /* Main */
 main {
-    padding: 2rem;
+    font-size: 1rem;
+    padding: 1.5rem;
+    text-align: center;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2rem;
+    margin: 1dvw;
 }
 
 h1,
@@ -143,7 +145,7 @@ h3 {
 
 p {
     color: var(--light);
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 ul {
