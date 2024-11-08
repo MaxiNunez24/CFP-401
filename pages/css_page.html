@@ -1,0 +1,194 @@
+<h1>CSS (Cascading Style Sheets / Hojas de Estilo en Cascada)</h1>
+
+<section>
+    <h2>1. ¿Qué es CSS?</h2>
+    <p>
+        CSS es un lenguaje de diseño/estilado declarativo para describir la presentación de un documento, en nuestro
+        caso, HTML. Con CSS tenemos el segundo pilar de la web:
+    </p>
+    <ul>
+        <li><strong>HTML</strong> -> Lenguaje de marcado -> <em>Marcado</em></li>
+        <li><strong>CSS</strong> -> Lenguaje de diseño -> <em>Estilado</em></li>
+        <li><strong>JavaScript</strong> -> Lenguaje de programación -> <em>Interacción</em></li>
+    </ul>
+    <p>
+        El lanzamiento inicial de CSS fue el 17 de diciembre de <strong>1996</strong> y el primer navegador en darle
+        soporte fue Internet Explorer 3. El lenguaje tiene una especificación mantenida por el <em>World Wide Web
+            Consortium (W3C)</em>. Esto asegura que los diseños que realizamos sean predecibles y se vean de manera
+        consistente en todos los navegadores.
+    </p>
+</section>
+
+<section>
+    <h2>2. Semántica de CSS</h2>
+    <p>
+        Con respecto a su nombre, las <strong>Hojas de Estilo</strong> son una <em>colección de reglas</em> que
+        escribimos en el lenguaje y aplicamos a un documento para darle un diseño. La parte de <strong>Cascada</strong>
+        se refiere a cómo se aplican las reglas/diseños al documento, siguiendo un <em>orden</em>, una
+        <em>especificidad</em>, una <em>importancia</em>, los <em>autores</em>, etc. Esto hace que las reglas se
+        <strong>sobrescriban</strong> dependiendo del contexto en el que se encuentren, formando así una cascada.
+    </p>
+    <pre><code>selector {
+    propiedad: valor;  /* <- Declaración */
+}</code></pre>
+</section>
+
+<section>
+    <h2>3. Estilos en HTML</h2>
+    <h3>3.1. Etiqueta <code>&lt;style&gt;</code></h3>
+    <p>Una etiqueta que suele colocarse dentro de <code>&lt;head&gt;</code>, aunque puede colocarse en cualquier otro
+        lugar.</p>
+    <pre><code>&lt;style&gt;
+    selector {
+        propiedad: valor;     
+    }
+&lt;/style&gt;</code></pre>
+
+    <h3>3.2. En Línea</h3>
+    <p>Estilos declarados como <em>atributos</em> en los elementos HTML. <strong>No son recomendados</strong>.</p>
+    <pre><code>&lt;h1 style="color: blue;"&gt;
+    Hola Mundo
+&lt;/h1&gt;</code></pre>
+
+    <h3>3.3. Vinculación</h3>
+    <p>Estilos <em>separados</em> en un archivo con <em>extensión .css</em>. Son los más recomendados para una mejor
+        <strong>organización</strong>, <strong>prolijidad</strong> y <strong>reutilización</strong>.
+    </p>
+    <pre><code>&lt;link rel="stylesheet" href="nombre.css"&gt;</code></pre>
+</section>
+
+<section>
+    <h2>4. Selectores</h2>
+    <h3>4.1. Etiquetas</h3>
+    <p>Selecciona <strong>todas</strong> las ocurrencias con esa etiqueta y les aplica las declaraciones.</p>
+    <pre><code>h1 {
+    color: blue;
+}</code></pre>
+
+    <h3>4.2. Clases</h3>
+    <p>Selecciona <strong>todas</strong> las ocurrencias con esa clase y les aplica las declaraciones.</p>
+    <pre><code>&lt;etiqueta class="nombreDeClase"&gt;
+</code></pre>
+    <pre><code>/* Punto para las clases */
+.nombreDeClase {
+    propiedad: valor;
+}</code></pre>
+
+    <h3>4.3. ID</h3>
+    <p>Selecciona el elemento con esa <strong>identificación</strong> y le aplica las declaraciones.</p>
+    <pre><code>&lt;etiqueta id="identificacion"&gt;
+</code></pre>
+    <pre><code>/* Hash para las IDs */
+#identificacion {
+    propiedad: valor;
+}</code></pre>
+    <p>Siempre es mejor <strong>reutilizar</strong> nuestros estilos, por lo que no es recomendado
+        <strong>abusar</strong> de las <strong>identificaciones</strong>.
+    </p>
+</section>
+
+<section>
+    <h2>5. Especificidad</h2>
+    <ol>
+        <li><strong>Estilos en línea</strong> ->
+            <pre><code>&lt;h1 style="color: blue;"&gt;Hola Mundo&lt;/h1&gt;</code></pre>
+        </li>
+        <li><strong>Identificadores</strong> ->
+            <pre><code>&lt;h1 id="identificador"&gt;Hola Mundo&lt;/h1&gt;</code></pre>
+            <pre><code>#identificador {
+    color: blue;
+}</code></pre>
+        </li>
+        <li><strong>Clases</strong> ->
+            <pre><code>&lt;h1 class="nombreDeClase"&gt;Hola Mundo&lt;/h1&gt;</code></pre>
+            <pre><code>.nombreDeClase {
+    color: blue;
+}</code></pre>
+        </li>
+        <li><strong>Etiquetas</strong> ->
+            <pre><code>&lt;h1&gt;Hola Mundo&lt;/h1&gt;</code></pre>
+            <pre><code>h1 {
+    color: blue;
+}</code></pre>
+        </li>
+    </ol>
+</section>
+
+<section>
+    <h2>6. Tipos de colores</h2>
+    <pre><code>/* Valores de palabras clave */
+color: currentcolor; 
+/* Se utiliza a veces de forma automática para bordes */
+/* Toma el valor actual del elemento superior o del texto (en bordes) */
+
+/* Valores &lt;named-color&gt; */
+color: red;
+color: orange;
+color: tan;
+color: rebeccapurple;
+/* Palabras reservadas para la mayoría de colores (se pueden ver diferente en cada navegador)*/
+
+/* Valores &lt;hex-color&gt; */
+color: #090; 
+/* Son equivalentes */
+color: #009900;
+
+color: #090a;
+/* Para manejar la opacidad*/
+color: #009900aa;
+
+/* Valores &lt;rgb()&gt; */
+color: rgb(34, 12, 64, 0.6);
+color: rgba(34, 12, 64, 0.6);
+color: rgba(34 12 64 / 0.3);
+color: rgba(34 12 64 / 30%);
+/* Ya no se usan */
+
+color: rgb(34 12 64 / 0.6);
+color: rgb(34 12 64 / 60%);
+/* Formas modernas */
+
+/* Valores &lt;hsl()&gt; */
+color: hsl(30, 100%, 50%, 0.6);
+color: hsla(30, 100%, 50%, 0.6);
+color: hsl(30 100% 50% / 0.6);
+color: hsla(30 100% 50% / 0.6);
+color: hsl(30 100% 50% / 60%);
+color: hsla(30.2 100% 50% / 60%);
+
+/* Valores Globales */
+color: inherit;
+color: initial;
+color: unset;</code></pre>
+    <p><a href="https://developer.mozilla.org/es/docs/Web/CSS/color" target="_blank">MDN CSS -> Color</a></p>
+</section>
+
+<section>
+    <h2>7. Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN Web Docs - CSS</a></li>
+        <li><a href="https://web.dev/learn/css?hl=es" target="_blank">Google Chrome - Tutorial de CSS</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>8. Ejercicios Prácticos</h2>
+    <ol>
+        <li><strong>Crear una hoja de estilos básica</strong>: Crear una hoja de estilos que cambie el color de fondo,
+            el color del texto y el tamaño de la fuente de una página HTML.</li>
+        <li><strong>Experimentar con selectores</strong>: Crear una hoja de estilos que utilice selectores de etiquetas,
+            clases e identificadores para aplicar diferentes estilos a una página HTML.</li>
+    </ol>
+</section>
+
+<section>
+    <h2>9. Preguntas Frecuentes</h2>
+    <h3>1. ¿Es obligatorio cerrar todas las etiquetas en CSS?</h3>
+    <p>No, en CSS no es necesario cerrar las etiquetas como en HTML. Sin embargo, es importante asegurarse de que todas
+        las declaraciones estén correctamente delimitadas por llaves <code>{}</code>.</p>
+
+    <h3>2. ¿Qué es CSS3 y por qué es importante?</h3>
+    <p><strong>CSS3</strong> es la versión más reciente de CSS y es importante porque introduce nuevas propiedades y
+        capacidades, como animaciones, transiciones y flexbox, que permiten crear diseños web más avanzados y
+        responsivos.</p>
+</section>
