@@ -52,7 +52,7 @@ li {
     background: rgb(8, 91, 182);
     background: linear-gradient(-90deg, rgba(8, 91, 182, 1) 0%, rgba(150, 85, 163, 1) 71%, rgba(230, 88, 163, 1) 100%);
     display: grid;
-    grid-template-columns: 23dvh 0fr 1fr;
+    grid-template-columns: 23dvh 1fr;
     width: 100%;
     height: 20dvh;
     align-items: center;
@@ -61,30 +61,39 @@ li {
 
 .header-logo {
     border-radius: 20%;
+    background-image: url('./logo.ico');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 20dvh;
     height: 18dvh;
     margin: 1dvh;
     object-fit: cover;
 }
 
+.header-logo:active {
+    filter: brightness(110%);
+    border-color: #fff;
+}
+
 
 .header .nav-mobile {
+    display: none;
+    background-color: rgb(0 0 0/ 0);
+    border: none;
+    background-image: url('./menubar.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     filter: brightness(100);
     width: 15dvh;
     height: 15dvh;
-    display: none;
     margin-right: 2dvh;
     border-radius: 50%;
     position: absolute;
     top: 2dvh;
     right: 2dvh;
 }
-
-
-#check {
-    display: none;
-}
-
 
 .header .nav-icon {
     max-width: 2rem;
@@ -101,20 +110,39 @@ nav {
     transition: all .5s ease;
 }
 
-
-nav a {
+nav button {
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
     transition: .3s ease;
 }
 
+nav button img {
+    max-width: 2rem;
+    margin: 10px;
+    filter: invert(1);
+}
 
-nav a.active,
-nav a:hover {
-    cursor: pointer;
+nav button p {
+    margin: 0;
+}
+
+nav button:hover,
+nav button:focus {
+    outline: none;
     filter: invert(.3) sepia(1) saturate(3) hue-rotate(245deg);
 }
 
+nav button.selected {
+    filter: invert(.3) sepia(1) saturate(3) hue-rotate(245deg);
+}
 
 /* Main */
 
@@ -231,20 +259,19 @@ nav a:hover {
         z-index: 1000;
     }
 
-    nav a {
+    nav button {
         text-align: center;
         justify-content: center;
         border: 2px solid #000;
+        width: 100%;
     }
 
-
-    #check:checked~nav {
+    .nav {
         display: block;
     }
 
-    #check:checked~label img {
+    .nav-mobile.rotate {
         transition: .5s ease;
         transform: rotate(360deg);
     }
-
 }

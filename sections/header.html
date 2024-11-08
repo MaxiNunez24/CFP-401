@@ -1,35 +1,46 @@
-<img class="header-logo" src="./assets/logo.ico">
-<input type="checkbox" id="check">
-<label for="check">
-    <img class="nav-mobile" src="./assets/menubar.png">
-</label>
-<nav>
-    <a href="inicio">
+<button class="header-logo" onclick="cargarSeccion('main','pages','inicio')"></button>
+<button id="nav-mobile" class="nav-mobile" onclick="
+    toggleClase('nav-mobile', 'rotate');
+    toggleClase('nav', 'nav');
+"></button>
+<nav id="nav" class="">
+    <button onclick="
+        cargarSeccion('main','pages','inicio')
+        quitarClase('nav','nav')
+    ">
         <img class="nav-icon" src="./assets/inicio.png">
         <p>Inicio</p>
-    </a>
+    </button>
 
-
-    <a href="curso">
+    <button onclick="
+        cargarSeccion('main','pages','curso')
+        quitarClase('nav','nav')
+    ">
         <img class="nav-icon" src="./assets/curso.png">
         <p>Curso</p>
-    </a>
+    </button>
 
-
-    <a href="proyectos">
+    <button onclick="
+        cargarSeccion('main','pages','proyectos')
+        quitarClase('nav','nav')
+    ">
         <img class="nav-icon" src="./assets/proyectos.png">
         <p>Proyectos</p>
-    </a>
+    </button>
 
-
-    <a href="nosotros">
+    <button onclick="
+        cargarSeccion('main','pages','nosotros')
+        quitarClase('nav','nav')
+    ">
         <img class="nav-icon" src="./assets/nosotros.png">
         <p>Nosotros</p>
-    </a>
+    </button>
 
-
-    <a href="expo">
+    <button onclick="
+        cargarSeccion('main','pages','expo')
+        quitarClase('nav','nav')
+    ">
         <img class="nav-icon" src="./assets/expo.png">
         <p>Expo</p>
-    </a>
+    </button>
 </nav>

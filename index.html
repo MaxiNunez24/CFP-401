@@ -5,42 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/estilos.css">
-    <script defer>
-        async function cargarSeccion() {
-            const header = await fetch('./sections/header.html').then(response => response.text());
-            const footer = await fetch('./sections/footer.html').then(response => response.text());
-            document.getElementById('header').innerHTML = header;
-            document.getElementById('footer').innerHTML = footer;
-
-            const check = document.getElementById('check');
-
-            // Añadir manejadores de eventos a los enlaces del nav
-            document.querySelectorAll('.header nav a').forEach(enlace => {
-                enlace.addEventListener('click', async (evento) => {
-                    evento.preventDefault();
-                    const pagina = enlace.getAttribute('href');
-                    await cargarPagina(pagina);
-                    check.checked = false;
-                });
-            });
-
-            // Cargar la página de inicio por defecto
-            await cargarPagina('inicio');
-        }
-
-        async function cargarPagina(page) {
-            try {
-                const content = await fetch(`./pages/${page}.html`).then(response => response.text());
-                document.getElementById('main').innerHTML = content;
-            } catch (error) {
-                document.getElementById('main').innerHTML =
-                    `<h1>Error 404: La página ${page} no fue encontrada. </h1>`;
-                console.error(`Error al cargar la página ${page}:`, error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', cargarSeccion);
-    </script>
+    <script defer src="./scripts/cargarSeccion.js"></script>
+    <script defer src="./scripts/controlarEstilos.js"></script>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>CFP 401 Laura Vicuña</title>
 </head>
