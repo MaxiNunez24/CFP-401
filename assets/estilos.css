@@ -18,7 +18,7 @@ body {
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
     background-color: var(--grey);
-    background-image: url('./background.png');
+    background-image: url('./icons/background.png');
     background-repeat: no-repeat;
     background-size: 100dvw 100dvh;
     background-attachment: fixed;
@@ -61,7 +61,7 @@ li {
 
 .header-logo {
     border-radius: 20%;
-    background-image: url('./logo.ico');
+    background-image: url('./icons/logo.ico');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -82,7 +82,7 @@ li {
     display: none;
     background-color: rgb(0 0 0/ 0);
     border: none;
-    background-image: url('./menubar.png');
+    background-image: url('./icons/menubar.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -183,6 +183,11 @@ nav button.selected {
     border: 2px solid #fff;
 }
 
+.cards a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .cards button {
     display: flex;
     flex-direction: column;
@@ -199,7 +204,7 @@ nav button.selected {
     height: 100%;
 }
 
-.cards button img {
+.cards img {
     width: 100px;
     height: 100px;
     object-fit: contain;
@@ -209,28 +214,13 @@ nav button.selected {
     margin: 0;
 }
 
-.cards button:hover,
-.cards button:focus {
+.cards:hover,
+.cards:focus {
+    cursor: pointer;
     outline: none;
     filter: brightness(1.2);
     color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Footer */
 .footer {
@@ -295,10 +285,6 @@ nav button.selected {
     background-color: #e1306c;
     border-radius: 30%;
 }
-
-
-
-
 
 /* Responsive */
 
