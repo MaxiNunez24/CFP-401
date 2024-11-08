@@ -76,6 +76,7 @@ li {
     border-color: #fff;
 }
 
+/* Nav */
 
 .header .nav-mobile {
     display: none;
@@ -146,15 +147,54 @@ nav button.selected {
 
 /* Main */
 
-/* Inicio */
-
-
 
 /* Curso */
+.lang-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    gap: 20px;
+}
 
+.cards img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
 
+.cards {
+    background: rgb(75, 69, 168);
+    background: linear-gradient(45deg, rgba(75, 69, 168, 0.9612219887955182) 0%, rgba(120, 145, 163, 0.3841911764705882) 57%, rgba(45, 153, 175, 0.8435749299719888) 100%);
+    width: 130px;
+    height: 180px;
+    border-radius: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    border: 2px solid var(--blue1);
+    box-shadow: 0 2px 10px 0 #00000080;
+    transition: .4s ease;
+}
 
-/* Nosotros */
+.cards:hover {
+    transform: scale(1.1) rotate(-2deg);
+    filter: brightness(1.2);
+    box-shadow: 0 10px 10px 0 #00000080;
+    color: var(--pink1);
+    border: 2px solid #fff;
+}
+
+.cards:hover a {
+    transition: .4s ease-in-out;
+    color: #fff;
+}
+
 
 
 
