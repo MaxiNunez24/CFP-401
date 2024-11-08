@@ -1,0 +1,167 @@
+<h1>HTML (HyperText Markup Language / Lenguaje de Marcado de HiperTexto)</h1>
+
+<section>
+    <h2>1. ¿Qué es HTML?</h2>
+    <p>
+        Es el <strong>lenguaje estándar</strong> utilizado para crear páginas web. HTML define la <strong>estructura
+            básica</strong> de un sitio web utilizando <strong>elementos</strong> y <strong>etiquetas</strong> que
+        permiten organizar y mostrar <em>contenido</em> como <strong>texto</strong>, <strong>imágenes</strong>,
+        <strong>videos</strong>, <strong>enlaces</strong>, <strong>formularios</strong>, y más.
+        <strong>No es un lenguaje de programación</strong>, como si lo es <a href="javascript_page.html">JavaScript</a>,
+        <strong>ni de estilado</strong>, como si lo es <a href="css_page.html">CSS</a>, por lo que sólo vamos a
+        "marcar", describir o estructurar nuestra página con él.
+    </p>
+</section>
+
+<section>
+    <h2>2. Un Poco de Historia</h2>
+    <p>
+        HTML fue creado por <strong>Tim Berners-Lee</strong> en <strong>1991</strong> mientras trabajaba en el CERN
+        (Organización Europea para la Investigación Nuclear). Desde entonces, HTML ha <strong>evolucionado</strong>
+        significativamente, con la última versión importante, <strong>HTML5</strong>, lanzada en <strong>2014</strong>.
+        HTML5 introdujo nuevas <em>etiquetas</em> y <em>capacidades</em>, como <strong>soporte para multimedia</strong>,
+        <em>gráficos</em> y <em>aplicaciones interactivas</em> sin la necesidad de plugins adicionales.
+    </p>
+</section>
+
+<section>
+    <h2>3. La Sintaxis Básica de HTML</h2>
+    <p>
+        HTML utiliza una serie de <strong>etiquetas</strong> que están delimitadas por <code>&lt;</code> y
+        <code>&gt;</code>. Estas etiquetas suelen aparecer en <strong>pares</strong>, con una <strong>etiqueta de
+            apertura</strong> y una <strong>etiqueta de cierre</strong>, que <em>envuelven</em> el
+        <strong>contenido</strong> al que se aplican. Es decir, los <strong>Elementos HTML</strong> son el
+        <strong>contenido de la página</strong> intercalado entre las etiquetas. Por ejemplo, el
+        <strong>elemento</strong> <code>&lt;p&gt;</code> incluiría tanto la <em>etiqueta de apertura</em>
+        <code>&lt;p&gt;</code> como el <em>contenido del párrafo</em>, así como la <em>etiqueta de cierre</em>
+        <code>&lt;/p&gt;</code>. La mayoría de los elementos siguen esta estructura:
+    </p>
+    <pre><code>&lt;etiqueta&gt;Contenido&lt;/etiqueta&gt;</code></pre>
+    <p>Por ejemplo, un párrafo en HTML se escribiría así:</p>
+    <pre><code>&lt;p&gt;Este es un párrafo en HTML.&lt;/p&gt;</code></pre>
+</section>
+
+<section>
+    <h2>4. Estructura de un Documento HTML</h2>
+    <p>Un documento HTML básico tiene una estructura estándar que incluye las siguientes secciones:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi Primera Página Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;¡Hola, mundo!&lt;/h1&gt;
+    &lt;p&gt;Este es un párrafo en mi primera página web.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <h3>Descripción de las Etiquetas Principales</h3>
+    <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code>: Declara que el <strong>documento está en HTML5</strong>.</li>
+        <li><code>&lt;html&gt;</code>: Es la <strong>raíz</strong> del documento HTML.</li>
+        <li><code>&lt;head&gt;</code>: Contiene <strong>metadatos</strong> como el <em>título</em> de la página,
+            <em>enlaces</em> a hojas de estilo, y otros elementos que <strong>no se muestran</strong> directamente en la
+            página.
+        </li>
+        <li><code>&lt;title&gt;</code>: Define el <strong>título</strong> de la página que aparece en la pestaña del
+            navegador.</li>
+        <li><code>&lt;meta charset="UTF-8"&gt;</code>: Especifica la <strong>codificación de caracteres</strong>,
+            permitiendo el uso de <em>caracteres especiales</em>.</li>
+        <li><code>&lt;body&gt;</code>: Contiene todo el contenido que <strong>se mostrará</strong> en la página web.
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>5. Semántica en HTML</h2>
+    <p>
+        La semántica en HTML se refiere al uso de etiquetas que <strong>describen adecuadamente</strong> el tipo de
+        contenido que contienen. Esto mejora la <strong>accesibilidad</strong>, el <strong>SEO</strong> (Search Engine
+        Optimization/Optimización para motores de búsqueda), y la <strong>comprensión del código</strong> tanto por
+        <em>humanos</em> como por <em>motores de búsqueda</em>.
+    </p>
+    <h3>Ejemplos de etiquetas semánticas</h3>
+    <ul>
+        <li><code>&lt;header&gt;</code>: <strong>Encabezado</strong> de una <em>sección</em> o <em>página</em>.</li>
+        <li><code>&lt;nav&gt;</code>: Contiene <strong>enlaces de navegación</strong>.</li>
+        <li><code>&lt;main&gt;</code>: <strong>Contenido principal</strong> de la página.</li>
+        <li><code>&lt;article&gt;</code>: Un <strong>artículo independiente</strong>.</li>
+        <li><code>&lt;footer&gt;</code>: <strong>Pie de página</strong>.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>6. Conceptos Básicos de HTML</h2>
+    <h3>6.1. Listas</h3>
+    <p>Existen <em>dos tipos principales</em> de <strong>listas</strong> en HTML:</p>
+    <h4>Listas ordenadas (<code>&lt;ol&gt;</code>)</h4>
+    <pre><code>&lt;ol&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    <h4>Listas desordenadas (<code>&lt;ul&gt;</code>)</h4>
+    <pre><code>&lt;ul&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+    <h3>6.2. Enlaces</h3>
+    <p>Los enlaces se crean con la etiqueta <code>&lt;a&gt;</code> (Pueden contener tanto referencias internas como
+        externas):</p>
+    <pre><code>&lt;a href="https://www.example.com"&gt;Visita Example Externa&lt;/a&gt;
+&lt;a href="../assets/examples/index.html"&gt;Visita Example Interna&lt;/a&gt;</code></pre>
+
+    <h3>6.3. Imágenes</h3>
+    <p>Las imágenes se <em>insertan</em> utilizando la etiqueta <code>&lt;img&gt;</code> (Al ser un elemento
+        reemplazable no hace falta cerrar la etiqueta):</p>
+    <pre><code>&lt;img src="assets/imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+
+    <h3>6.4. Tablas</h3>
+    <p>Las tablas se estructuran con etiquetas como <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> (fila),
+        <code>&lt;td&gt;</code> (celda), y <code>&lt;th&gt;</code> (encabezado de columna):
+    </p>
+    <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Encabezado 1&lt;/th&gt;
+        &lt;th&gt;Encabezado 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Dato 1&lt;/td&gt;
+        &lt;td&gt;Dato 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</section>
+
+<section>
+    <h2>7. Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - Tutorial de HTML</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>8. Ejercicios Prácticos</h2>
+    <ol>
+        <li><strong>Crear una página HTML básica</strong>: Creen una página con un <em>título</em>, un <em>par de
+                párrafos</em>, una <em>imagen</em> y un <em>enlace</em>.</li>
+        <li><strong>Experimentar con etiquetas semánticas</strong>: Modificar la <em>estructura de la página</em> para
+            incluir <strong>etiquetas semánticas</strong> como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+            <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, y <code>&lt;footer&gt;</code>.
+        </li>
+    </ol>
+</section>
+
+<section>
+    <h2>9. Preguntas Frecuentes</h2>
+    <h3>1. ¿Es obligatorio cerrar todas las etiquetas en HTML?</h3>
+    <p>Sí, la mayoría de las etiquetas <strong>deben cerrarse</strong> para que el código sea válido, aunque hay algunas
+        <strong>excepciones</strong> como <code>&lt;img&gt;</code> y <code>&lt;br&gt;</code>.
+    </p>
+
+    <h3>2. ¿Qué es HTML5 y por qué es importante?</h3>
+    <p><strong>HTML5</strong> es la versión <em>más reciente</em> de HTML y es importante porque <em>introduce nuevas
+            etiquetas</em>, <strong>mejora</strong> <em>la semántica</em> y <em>accesibilidad</em>, y <strong>permite el
+            uso de multimedia</strong> sin necesidad de plugins.</p>
+</section>
