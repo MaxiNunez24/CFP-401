@@ -9,6 +9,10 @@
     --light: #f5f5f5;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: grid;
     min-height: 100dvh;
@@ -22,7 +26,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-
+    user-select: none;
 }
 
 a {
@@ -44,14 +48,104 @@ li {
 
 /* Header */
 
+.header {
+    background: rgb(8, 91, 182);
+    background: linear-gradient(-90deg, rgba(8, 91, 182, 1) 0%, rgba(150, 85, 163, 1) 71%, rgba(230, 88, 163, 1) 100%);
+    display: grid;
+    grid-template-columns: 23dvh 1fr;
+    width: 100%;
+    height: 20dvh;
+    align-items: center;
+    justify-items: center;
+}
 
+.header-logo {
+    border-radius: 20%;
+    background-image: url('./logo.ico');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20dvh;
+    height: 18dvh;
+    margin: 1dvh;
+    object-fit: cover;
+}
 
+.header-logo:active {
+    filter: brightness(110%);
+    border-color: #fff;
+}
 
 /* Nav */
 
+.header .nav-mobile {
+    display: none;
+    background-color: rgb(0 0 0/ 0);
+    border: none;
+    background-image: url('./menubar.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(100);
+    width: 15dvh;
+    height: 15dvh;
+    margin-right: 2dvh;
+    border-radius: 50%;
+    position: absolute;
+    top: 2dvh;
+    right: 2dvh;
+}
+
+.header .nav-icon {
+    max-width: 2rem;
+    margin: 10px;
+    filter: invert(1);
+}
 
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2dvw;
+    transition: all .5s ease;
+}
 
+nav button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    transition: .3s ease;
+}
+
+nav button img {
+    max-width: 2rem;
+    margin: 10px;
+    filter: invert(1);
+}
+
+nav button p {
+    margin: 0;
+}
+
+nav button:hover,
+nav button:focus {
+    outline: none;
+    filter: invert(.3) sepia(1) saturate(3) hue-rotate(245deg);
+}
+
+nav button.selected {
+    filter: invert(.3) sepia(1) saturate(3) hue-rotate(245deg);
+}
+
+/* Main */
 
 
 /* Curso */
@@ -178,5 +272,46 @@ li {
 @media (width < 480px) {
     .footer {
         flex-direction: column;
+    }
+}
+
+@media (width < 768px) {
+    .header .nav-mobile {
+        display: block;
+    }
+
+    .header {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: start;
+    }
+
+    main {
+        z-index: 500;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        font-size: 20px;
+        background: rgb(211, 23, 128);
+        background: linear-gradient(0deg, rgba(211, 23, 128, 0.5) 0%, rgba(12, 88, 174, 0.7) 30%, rgba(0, 2, 4, 0.9) 100%);
+        z-index: 1000;
+    }
+
+    nav button {
+        text-align: center;
+        justify-content: center;
+        border: 2px solid #000;
+        width: 100%;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav-mobile.rotate {
+        transition: .5s ease;
+        transform: rotate(360deg);
     }
 }
