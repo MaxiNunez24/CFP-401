@@ -174,7 +174,11 @@ a:hover {
     color: var(--pink2);
 }
 
-
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 /* Curso */
 .lang-containers {
