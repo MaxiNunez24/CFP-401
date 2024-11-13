@@ -1,0 +1,57 @@
+<button class="header-logo" onclick="
+        cargarSeccion('main','pages','inicio')
+        quitarClase('nav','nav')
+        quitarClase('nav-mobile','rotate')
+    ">
+</button>
+<button id="nav-mobile" class="nav-mobile" onclick="
+    toggleClase('nav-mobile', 'rotate');
+    toggleClase('nav', 'nav');
+    ">
+</button>
+<nav id="nav" class="">
+    <button onclick="
+        cargarSeccion('main','pages','inicio')
+        quitarClase('nav','nav')
+        quitarClase('nav-mobile','rotate')
+    ">
+        <img class="nav-icon" src="./assets/icons/inicio.png">
+        <p>Inicio</p>
+    </button>
+
+    <button onclick="
+        cargarSeccion('main','pages','curso')
+        quitarClase('nav','nav')
+        quitarClase('nav-mobile','rotate')
+    ">
+        <img class="nav-icon" src="./assets/icons/curso.png">
+        <p>Curso</p>
+    </button>
+
+    <button onclick="
+        cargarSeccion('main','pages','proyectos')
+        quitarClase('nav','nav')
+        quitarClase('nav-mobile','rotate')
+    ">
+        <img class="nav-icon" src="./assets/icons/proyectos.png">
+        <p>Proyectos</p>
+    </button>
+
+    <button onclick="
+        cargarSeccion('main','pages','nosotros')
+        quitarClase('nav','nav')
+        quitarClase('nav-mobile','rotate')
+    ">
+        <img class="nav-icon" src="./assets/icons/nosotros.png">
+        <p>Nosotros</p>
+    </button>
+
+    <button onclick="
+        cargarSeccion('main','pages','expo')
+        quitarClase('nav','nav')
+        quitarClase('nav-mobile','rotate')
+    ">
+        <img class="nav-icon" src="./assets/icons/expo.png">
+        <p>Expo</p>
+    </button>
+</nav>

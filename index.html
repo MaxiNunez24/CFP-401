@@ -5,46 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/estilos.css">
-    <script defer>
-        async function cargarSeccion() {
-            const header = await fetch('./sections/header.html').then(response => response.text());
-            const nav = await fetch('./sections/nav.html').then(response => response.text());
-            const footer = await fetch('./sections/footer.html').then(response => response.text());
-
-            document.getElementById('header').innerHTML = header;
-            document.getElementById('nav').innerHTML = nav;
-            document.getElementById('footer').innerHTML = footer;
-
-            // Añadir manejadores de eventos a los enlaces del nav
-            document.querySelectorAll('.nav a').forEach(enlace => {
-                enlace.addEventListener('click', async (evento) => {
-                    evento.preventDefault();
-                    const pagina = evento.target.getAttribute('href').replace('#', '');
-                    await cargarPagina(pagina);
-                });
-            });
-            // Cargar la página de inicio por defecto
-            await cargarPagina('inicio');
-        }
-
-        async function cargarPagina(page) {
-            try {
-                const content = await fetch(`./pages/${page}.html`).then(response => response.text());
-                document.getElementById('main').innerHTML = content;
-            } catch (error) {
-                console.error(`Error al cargar la página ${page}:`, error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', cargarSeccion());
-    </script>
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script defer src="./scripts/cargarSeccion.js"></script>
+    <script defer src="./scripts/controlarEstilos.js"></script>
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
     <title>CFP 401 Laura Vicuña</title>
 </head>
 
 <body>
     <header id="header" class="header"></header>
-    <nav id="nav" class="nav"></nav>
     <main id="main" class="main"></main>
     <footer id="footer" class="footer"></footer>
 </body>

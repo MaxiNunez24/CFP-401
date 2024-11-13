@@ -1,0 +1,145 @@
+<h1>Introducción a JavaScript</h1>
+
+<section>
+    <h2>1. ¿Qué es JavaScript?</h2>
+    <p>
+        JavaScript es un lenguaje de programación interpretado que se utiliza principalmente para crear contenido web
+        interactivo. Es uno de los tres pilares fundamentales del desarrollo web, junto con HTML y CSS.
+    </p>
+    <ul>
+        <li><strong>HTML</strong> -> Lenguaje de marcado -> <em>Marcado</em></li>
+        <li><strong>CSS</strong> -> Lenguaje de diseño -> <em>Estilado</em></li>
+        <li><strong>JavaScript</strong> -> Lenguaje de programación -> <em>Interacción</em></li>
+    </ul>
+</section>
+
+<section>
+    <h2>2. Tipos de Datos en JavaScript</h2>
+    <p>JavaScript tiene varios tipos de datos que se pueden utilizar para almacenar y manipular información:</p>
+    <ul>
+        <li><strong>Number</strong>: Números, tanto enteros como decimales. Ejemplo: <code>42</code>, <code>3.14</code>
+        </li>
+        <li><strong>String</strong>: Cadenas de texto. Ejemplo: <code>"Hola, mundo!"</code></li>
+        <li><strong>Boolean</strong>: Valores de verdad. Ejemplo: <code>true</code>, <code>false</code></li>
+        <li><strong>Array</strong>: Listas ordenadas de valores. Ejemplo: <code>[1, 2, 3]</code></li>
+        <li><strong>Object</strong>: Colecciones de pares clave-valor. Ejemplo:
+            <code>{ nombre: "Juan", edad: 30 }</code>
+        </li>
+        <li><strong>Null</strong>: Representa la ausencia intencional de un valor. Ejemplo: <code>null</code></li>
+        <li><strong>Undefined</strong>: Representa una variable que ha sido declarada pero no inicializada. Ejemplo:
+            <code>undefined</code>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>3. Variables</h2>
+    <p>En JavaScript, se pueden declarar variables utilizando las palabras clave <code>var</code>, <code>let</code> y
+        <code>const</code>:
+    </p>
+    <pre><code>// Declaración de variables
+var nombre = "Juan";
+let edad = 30;
+const PI = 3.14;</code></pre>
+</section>
+
+<section>
+    <h2>4. Operadores</h2>
+    <p>JavaScript tiene varios operadores que se pueden utilizar para realizar operaciones en variables y valores:</p>
+    <ul>
+        <li><strong>Operadores aritméticos</strong>: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+            <code>%</code>
+        </li>
+        <li><strong>Operadores de asignación</strong>: <code>=</code>, <code>+=</code>, <code>-=</code>,
+            <code>*=</code>, <code>/=</code>
+        </li>
+        <li><strong>Operadores de comparación</strong>: <code>==</code>, <code>===</code>, <code>!=</code>,
+            <code>!==</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>
+        </li>
+        <li><strong>Operadores lógicos</strong>: <code>&&</code>, <code>||</code>, <code>!</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>5. Estructuras de Control</h2>
+    <p>JavaScript tiene varias estructuras de control que se pueden utilizar para controlar el flujo de ejecución del
+        código:</p>
+    <h3>5.1. Condicionales</h3>
+    <pre><code>// Condicional if
+if (edad &gt;= 18) {
+    console.log("Eres mayor de edad");
+} else {
+    console.log("Eres menor de edad");
+}</code></pre>
+
+    <h3>5.2. Bucles</h3>
+    <pre><code>// Bucle for
+for (let i = 0; i &lt; 5; i++) {
+    console.log(i);
+}
+
+// Bucle while
+let i = 0;
+while (i &lt; 5) {
+    console.log(i);
+    i++;
+}</code></pre>
+</section>
+
+<section>
+    <h2>6. Funciones</h2>
+    <p>Las funciones son bloques de código reutilizables que realizan una tarea específica. En JavaScript, se pueden
+        declarar funciones de varias maneras:</p>
+    <h3>6.1. Funciones Declarativas</h3>
+    <pre><code>// Función declarativa
+function saludar(nombre) {
+    return "Hola, " + nombre;
+}
+console.log(saludar("Juan"));</code></pre>
+
+    <h3>6.2. Funciones Expresivas</h3>
+    <pre><code>// Función expresiva
+const saludar = function(nombre) {
+    return "Hola, " + nombre;
+};
+console.log(saludar("Juan"));</code></pre>
+
+    <h3>6.3. Funciones Flecha</h3>
+    <pre><code>// Función flecha
+const saludar = (nombre) => {
+    return "Hola, " + nombre;
+};
+console.log(saludar("Juan"));</code></pre>
+</section>
+
+<section>
+    <h2>7. Promesas</h2>
+    <p>Las promesas son objetos que representan la eventual finalización (o falla) de una operación asincrónica y su
+        valor resultante.</p>
+    <pre><code>// Crear una promesa
+const promesa = new Promise(
+    (resolve, reject) => {
+        const exito = true;
+        if (exito) {
+            resolve("La operación fue exitosa");
+        } else {
+            reject("La operación falló");
+        }
+    });
+
+// Usar una promesa
+promesa.then((mensaje) => {
+    console.log(mensaje);
+}).catch((error) => {
+    console.error(error);
+});</code></pre>
+</section>
+
+<section>
+    <h2>9. Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a>
+        </li>
+        <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools - Tutorial de JavaScript</a></li>
+    </ul>
+</section>
