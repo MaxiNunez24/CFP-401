@@ -130,7 +130,7 @@ nav button.selected {
 main {
     font-size: 1rem;
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -153,6 +153,7 @@ code {
 }
 
 pre {
+    text-align: left;
     background-color: var(--grey);
     padding: 0.4rem 0.2rem;
     border-radius: 5px;
@@ -191,6 +192,7 @@ ol {
 
 ul li,
 ol li {
+    list-style-type: none;
     margin-bottom: 0.5rem;
 }
 
@@ -264,7 +266,7 @@ img {
 
 .integrantes {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     margin: 0px;
 }
 
