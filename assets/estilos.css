@@ -247,7 +247,6 @@ img {
 }
 
 .nos-conteiner {
-    display: flex;
     text-align: center;
 }
 
@@ -285,6 +284,26 @@ img {
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.nos-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 0px;
+    gap: 10px;
+    justify-items: center;
+}
+
+.nos-galeria img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+
+.nos-galeria img:hover {
+    transform: scale(2);
 }
 
 .cards button {
