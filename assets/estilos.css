@@ -283,6 +283,7 @@ img {
     text-align: center;
     align-items: center;
     justify-content: center;
+}
 
 .cards button {
     display: flex;
