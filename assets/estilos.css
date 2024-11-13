@@ -244,6 +244,46 @@ img {
     color: #fff;
 }
 
+.nos-conteiner {
+    display: flex;
+    text-align: center;
+}
+
+.nos-devs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.nos-working {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.integrantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    margin: 0px;
+}
+
+.integrantes li img {
+    width: 50px;
+
+}
+
+.integrantes li p {
+    color: #d1d7df;
+    font-size: medium;
+}
+
+.integrantes li {
+    width: 80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
 .cards button {
     display: flex;
     flex-direction: column;
@@ -387,5 +427,9 @@ img {
     .nav-mobile.rotate {
         transition: .5s ease;
         transform: rotate(360deg);
+    }
+
+    .nos-conteiner {
+        flex-direction: column;
     }
 }
